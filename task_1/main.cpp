@@ -53,13 +53,15 @@ int getValidInteger()
         // Перевірка на введення цілого числа
         if (cin.fail() || cin.peek() != '\n')
         {
-            cin.clear(); // Скидаємо прапорець помилки
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Очищаємо буфер вводу
+            // Скидаємо прапорець помилки
+            cin.clear();
+             // Очищаємо буфер вводу
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Invalid input! Please enter an integer: ";
         }
         else
         {
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Очищаємо буфер вводу
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             break;
         }
     }
